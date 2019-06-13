@@ -1,0 +1,25 @@
+{%extends "base.html"%}
+
+{% block content %}
+    
+
+<h3 class="text text-primary"><bold>Music page</bold></h3>
+
+	
+{%for music in musician%}
+
+   <div class='card'>
+ 
+{{music.first_name|linebreaks}}
+<p class="card bg-success text-white">{{music.first_name}} is made of his own songs to start in 
+
+GangZang-Music-App if you want to listen to this song click here this below 
+
+link.</p>
+<a href="{{url_about.html}}">{{music.Album}}</a></div>
+{% endfor %}
+
+
+ 
+
+{%endblock%}

@@ -1,0 +1,37 @@
+{%extends "base.html"%}
+{%block content%}
+<h1>update page</h1>
+  {%for a in blog_get%}
+
+   <div class='card'>
+ 
+{{a.Artist|linebreaks}}
+<p class="card bg-primary text-white">{{a}} is made of his own songs to start in 
+
+GangZang-Music-App if you want to listen to this song click here this below 
+
+link.</p>
+
+
+<div class="container">
+	<div class="form-group">
+		{%if messages%}
+		<ul class="messages">
+	  {%for message in messages%}
+	  <li>
+	  	<div class="alert alert-success">{{message}}</div>
+	  </li>
+	  {%endfor%}
+	</ul>
+		{%endif%}
+	</div>
+
+<form action='' method="POST">
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type="submit" value="Update">
+	<input type="submit" value="Cancel">
+	</form>
+
+{% endfor %}
+{%endblock %}

@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{%block content%}
+<h1>Retrive page</h1>
+{%for a in album%}
+
+   <div class='card'>
+ 
+{{a.Artist|linebreaks}}
+<p class="card bg-primary text-white">{{a}} is made of his own songs to start in 
+
+GangZang-Music-App if you want to listen to this song click here this below 
+
+link.</p>
+
+{% endfor %}
+{%endblock %}
